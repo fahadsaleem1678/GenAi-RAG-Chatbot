@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Environment / secrets — NEVER commit API keys
+.env
+.env.*
+*.env
+
+# RAG cache (FAISS indexes — large binary files)
+.rag_cache/
+
+# Streamlit
+.streamlit/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploaded PDFs (don't commit user data)
+*.pdf
+!demo_sample.pdf
+~$*.docx
+*.docx.tmp

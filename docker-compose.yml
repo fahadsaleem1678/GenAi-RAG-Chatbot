@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  rag-app:
+    build: .
+    image: genai-rag:latest
+    ports:
+      - "8501:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - XAI_API_KEY=${XAI_API_KEY:-}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+    volumes:
+      - rag_cache:/app/.rag_cache
+    restart: unless-stopped
+
+volumes:
+  rag_cache:

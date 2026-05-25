@@ -1,0 +1,12 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.rag_cache/
+.env
+.env.*
+*.pdf
+!demo_sample.pdf
+.git/
+.idea/
+.vscode/
